@@ -12,7 +12,7 @@ const SpaceShip = () => {
   useEffect(() => {
     new GLTFLoader().load("/scene.gltf", setModel);
   }, []);
-
+  
   return model ? <primitive object={model.scene} /> : null;
 };
 
@@ -25,25 +25,20 @@ const Controls = () => {
   });
 
   return (
-    <orbitControls
-      autoRotate
-      maxPolarAngle={Math.PI / 2}
-      minPolarAngle={Math.PI / 3}
-      args={[camera, gl.domElement]}
-      ref={orbitRef}
-    />
+    <orbitControls autoRotate args={[camera, gl.domElement]} ref={orbitRef} />
   );
 };
 
 export default () => {
   const isBrowser = typeof window !== "undefined";
+  // var scene = new THREE.Scene(); // initialising the scene
+  // scene.background = new THREE.Color(0xff0000);
 
   return (
     <>
-      <h1>Hello everyone!</h1>
       {isBrowser && (
         <Canvas
-          camera={{ position: [0, 0, 5] }}
+          camera={{ position: [0, 0, 25] }}
           onCreated={({ gl }) => {
             gl.shadowMap.enabled = true;
             gl.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -51,7 +46,6 @@ export default () => {
         >
           <ambientLight intensity={2.0} />
 
-          
           <Controls />
           <SpaceShip />
         </Canvas>
