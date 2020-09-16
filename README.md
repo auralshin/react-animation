@@ -78,11 +78,11 @@ $ yarn start
 
 | Packages | README |
 | ------ | ------ |
-| three | [https://www.npmjs.com/package/three][PlDb] |
-| react-three-fiber | [https://www.npmjs.com/package/react-three-fiber][PlGh] |
-| react-spring | [https://www.npmjs.com/package/react-spring][PlGd] |
-| sass | [https://www.npmjs.com/package/sass][PlOd] |
-| drei | [https://www.npmjs.com/package/drei][PlMe] |
+| three | [https://www.npmjs.com/package/three] |
+| react-three-fiber | [https://www.npmjs.com/package/react-three-fiber] |
+| react-spring | [https://www.npmjs.com/package/react-spring][ |
+| sass | [https://www.npmjs.com/package/sass]|
+| drei | [https://www.npmjs.com/package/drei] |
 
 
 
