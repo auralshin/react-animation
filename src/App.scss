@@ -11,14 +11,6 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  overflow: hidden;
-  font-size: 14px;
 }
 
 #root {
@@ -33,7 +25,7 @@ body {
     helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   color: black;
   -webkit-font-smoothing: antialiased;
-  background: #f1f4f8;
+  background: #579bf3;
 }
 
 // header
