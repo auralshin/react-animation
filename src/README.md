@@ -2,7 +2,7 @@
 
 - You can either create your own new react app or clone already built app and do changes
 - For Both Option Instructions have been mentioned
-
+- Refer to [Webinar Video](https://www.youtube.com/watch?v=dVw6fJDxE2E&ab_channel=HackClubNMIT)
 ### Installation of React App
 
 React App [Install](https://create-react-app.dev/docs/getting-started/)
@@ -141,9 +141,6 @@ Now from Lights point of view we need to specify some properties of [Shadow Map]
 Bullet is a physics engine which simulates collision detection, soft and rigid body dynamics
  'ammo' stands for "Avoided Making My Own js physics engine by compiling bullet from C++"
 
-### Buffer Geometry and Lighting 
-- Refer to [Webinar Part - I](https://github.com/hackclubnmit/workshops/edit/master/011-Sep-20-2020/)
-- Refer to [Webinar Video](https://www.youtube.com/watch?v=dVw6fJDxE2E&ab_channel=HackClubNMIT)
 
 ### Use Cannon 
 To install [npm package](https://www.npmjs.com/package/use-cannon)
