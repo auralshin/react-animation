@@ -49,46 +49,37 @@ const Dash = () => {
   );
 };
 
-// const Huddle = ({
-//   args = [2, 0.3, 0.5],
-//   color,
-//   speed = 0.1,
-//   long = false,
-//   y = 2,
-//   right = false,
-//   ...props
-// }) => {
-//   const { viewport } = useThree();
-//   const { width } = viewport;
-//   const [ref, api] = useBox(() => ({ args, ...props }));
-//   let initial = right ? width : -width;
-//   let r = Math.random();
-//   let rot = 0.2 * speed;
-//   let x = initial;
-//   let z = 0;
-//   useFrame((state, delta) => {
-//     //api.rotation.set(0, 0, r * Math.PI + (right ? (z += rot) : (z -= rot)))
-//     api.position.set((x = right ? x - speed : x + speed), y, 0);
-//     if (right ? x + 2 < -width / 2 : x - 2 > width / 2) x = initial;
-//   });
-//   return (
-//     <mesh ref={ref}>
-//       <boxBufferGeometry attach="geometry" args={args} />
-//       <meshStandardMaterial attach="material" color={color} />
-//     </mesh>
-//   );
-// };
+ const Huddle = ({
+   args = [2, 0.3, 0.5],
+  color,
+   speed = 0.1,
+  long = false,
+  y = 2,
+   right = false,
+   ...props
+ }) => {
+   const { viewport } = useThree();
+  const { width } = viewport;
+   const [ref, api] = useBox(() => ({ args, ...props }));
+   let initial = right ? width : -width;
+   let r = Math.random();
+   let rot = 0.2 * speed;
+   let x = initial;
+   let z = 0;
+   useFrame((state, delta) => {
+    //api.rotation.set(0, 0, r * Math.PI + (right ? (z += rot) : (z -= rot)))
+     api.position.set((x = right ? x - speed : x + speed), y, 0);
+     if (right ? x + 2 < -width / 2 : x - 2 > width / 2) x = initial;
+   });
+   return (
+     <mesh ref={ref}>
+       <boxBufferGeometry attach="geometry" args={args} />
+       <meshStandardMaterial attach="material" color={color} />
+     </mesh>
+   );
+ };
 
-const Huddle = ({ args = [2, 0.3, 0.5], color, ...props }) => {
-  const [ref, api] = useBox(() => ({ args, ...props }));
 
-  return (
-    <mesh ref={ref}>
-      <boxBufferGeometry attach="geometry" args={args} />
-      <meshStandardMaterial attach="material" color={color} />
-    </mesh>
-  );
-};
 
 const Game = () => {
   return (
